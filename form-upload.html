@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8c6; /* kuning lembut */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .upload-container {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 360px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #444;
+        }
+        input[type="file"] {
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 8px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+        }
+        .note {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #f4c430; /* kuning emas */
+            color: #333;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Unggah File PDF</h2>
+        <form action="proses-upload.php" method="POST" enctype="multipart/form-data">
+            <label for="file_pdf">Pilih File PDF:</label><br>
+            <input type="file" name="file_pdf" id="file_pdf" accept="application/pdf" required>
+            <p class="note">Hanya file PDF (maksimal 10 MB)</p>
+            <button type="submit">Unggah</button>
+        </form>
+    </div>
+</body>
+</html>
